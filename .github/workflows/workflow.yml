@@ -1,0 +1,28 @@
+---
+# Workflows are configurable automated processes that will
+# run one or more jobs.
+# Workflows are defined via YAML files in the
+# .github/workflows directory
+# Workflows are run when triggered by an event in the
+# repository, schedule, or manually triggered
+# Repositories can have multiple workflows preforming
+# different sets of tasks
+# https://docs.github.com/en/actions/using-workflows/about-workflows#workflow-basics
+
+# The name displayed on the repositories Actions tab
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#name
+name: GitHub Actions Workflow
+
+# Will automatically trigger a workflow to define which
+# events can cause the workflow to run
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+on: [push]
+
+# A workflow is made up of one more jobs which run in
+# parallel by default
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobs
+jobs:
+  Learning-Workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Workflow test"
